@@ -6,6 +6,10 @@ import Profile from '../assets/images/profile.png'
 import '../assets/css/nav.css'
 import { AnimatePresence, motion } from "framer-motion";
 
+import { RiYoutubeFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill, RiFacebookFill, RiTwitterFill } from "react-icons/ri";
+
+
+
 import {
   Card,
   CardBody,
@@ -14,45 +18,36 @@ import {
   Button,
 } from "@material-tailwind/react";
 
-// import ChevronDownIcon from '@heroicons/react/24/outline'
 
-// const navigation = [
-//   {
-//     name: 'EXPLORE',
-//     href: '#'
-//   },
-//   {
-//     name: 'All PAGES',
-//     href: '#'
-//   },
-//   {
-//     name: 'TOP PAGES',
-//     href: '#'
-//   },
-//   {
-//     name: 'PLANES',
-//     href: '#'
-//   },
-//   {
-//     name: 'REGISTER',
-//     href: '#'
-//   },
-//   {
-//     name: 'DASHBOARD',
-//     href: '#'
-//   }
-
-// ]
-
-
-
+const explore = [
+  { name: 'PROWSE PROFILE' },
+  { name: 'WEDDING PROFILE' },
+  { name: 'ALL SERVICES' },
+]
+const all = [
+  { name: 'ALL PROFILE' },
+  { name: 'PROFILE DETAILS' },
+  { name: 'WEDDING' },
+  { name: 'WEDDING VIDEO' },
+  { name: 'OUR SERVICE' },
+  { name: 'PRICING PLANING' },
+  { name: 'LOGIN' },
+  { name: 'SING-UP' },
+  { name: 'PHOTO GALLERY 1' },
+  { name: 'PHOTO GALLERY 2' },
+  { name: 'CONTACT' },
+  { name: 'ABOUT' },
+  { name: 'ASK YOUR DOUBTS' },
+  { name: 'FAQ' },
+  { name: '404' },
+]
 
 const user = [
-  { name: 'veera', headding: 'user' }
+  { name: 'veerapandiyan', headding: 'adviser' }
 ]
 export default function Navebar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [hovering, setHovering] = useState(false)
+
 
   return (
     <>
@@ -88,7 +83,7 @@ export default function Navebar() {
               <Bars3Icon aria-hidden="true" className=" h-6 w-6" />
             </button>
           </div>
-          <div className="hidden ps-20 lg:flex lg:gap-x-8 text-yellow-900">
+          <div className="hidden ps-20 lg:flex lg:gap-x-8 text-sm text-yellow-900">
             {/* {navigation.map((item) => (
               <a key={item.name} href={item.href} className="text-sm/5  text-yellow-900">
                 {item.name}
@@ -96,25 +91,25 @@ export default function Navebar() {
             ))} */}
 
 
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Explore}>
-      EXPLORE 
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Allpages}>
-        ALL PAGES
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Toppages}>
-        TOP PAGES
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " >
-        PLANING
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " >
-        REGISTER
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Dashboard}>
-        DASHBOARD
-      </FlyoutLink>
-   
+            <FlyoutLink href="#" className="text-sm/5   " FlyoutContent={Explore}>
+              EXPLORE
+            </FlyoutLink>
+            <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Allpages}>
+              ALL PAGES
+            </FlyoutLink>
+            <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Toppages}>
+              TOP PAGES
+            </FlyoutLink>
+            <FlyoutLink href="#" className="text-sm/5  " >
+              PLANING
+            </FlyoutLink>
+            <FlyoutLink href="#" className="text-sm/5  " >
+              REGISTER
+            </FlyoutLink>
+            <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Dashboard}>
+              DASHBOARD
+            </FlyoutLink>
+
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
             <Menu as="div" className="relative ml-3">
@@ -185,40 +180,109 @@ export default function Navebar() {
                 <XMarkIcon aria-hidden="true" className="h-6 w-6" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
+            <div className="mt-6 pb-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
-                  {/* {navigation.map((item) => (
+                <div className="space-y-2 text-sm py-6">
+                  <h1 className='text-base/5 text-yellow-900 px-2 py-2 hover:bg-gray-50'>EXPLORE PAGES</h1>
+                  {explore.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base/5 text-yellow-900 hover:bg-gray-50"
+                      className="-mx-3 block ms-2 ps-5 border-b py-2 text-sm  hover:bg-gray-200"
                     >
+
                       {item.name}
                     </a>
-                  ))} */}
-                        <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Explore}>
-      EXPLORE 
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Allpages}>
-        ALL PAGES
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Toppages}>
-        TOP PAGES
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " >
-        PLANING
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " >
-        REGISTER
-      </FlyoutLink>
-      <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Dashboard}>
-        DASHBOARD
-      </FlyoutLink>
+                  ))}
+                  <h1 className='text-base/5 text-yellow-900 px-2 py-2 hover:bg-gray-50'>ALL PAGES</h1>
+                  {all.map((item) => (
+                    <a
+                      key={item.name}
+                      href={item.href}
+                      className="-mx-3 block ms-2 ps-5 border-b py-2 text-sm  hover:bg-gray-200"
+                    >
+
+                      {item.name}
+                    </a>
+                  ))}
+
+
+
+                  {/* support team  */}
+                  <h1 className='text-base/5 text-yellow-900 px-2 pt-2 hover:bg-gray-50'>SUPPORT TEAM</h1>
+                  <div className="py-6 flex">
+                    <div className=" lg:flex lg:flex-1 lg:justify-end">
+                      <Menu as="div" className="relative ml-3">
+                        <div>
+                          <MenuButton className="mt-3 relative  flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                            <span className="absolute -inset-1.5" />
+                            <span className="sr-only">Open user menu</span>
+                            <img
+                              alt=""
+                              src={Profile}
+                              className="h-20  w-20 rounded-full"
+                            />
+                          </MenuButton>
+                        </div>
+                      </Menu>
+                    </div>
+
+
+                    <div className="ps-5 pt-1 lg:flex lg:gap-x-8">
+                      {user.map((item) => (
+
+                        <a key={item.name} href={item.href} className='block pb-3'>
+
+                          <span className="block text-yellow-900">{item.name}</span>
+                          <span className='text-sm/5 text-gray-600'>{item.headding}</span>
+
+                        </a>
+
+                      ))}
+
+                      <a href="#"
+                        className="rounded-md bg-sky-950 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-yellow-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                      >
+                        Ask Your Doubts
+                      </a>
+
+                    </div>
+
+
+
+                  </div>
+
+
+
+
+
+
                 </div>
-                <div className="py-6">
-                </div>
+
               </div>
+            </div>
+
+            <div className=' flex justify-around bg-gray-300 rounded p-5' >
+              <a href="#" className="">
+                <RiWhatsappFill className=" w-8 h-8   rounded text-sky-950   hover:text-yellow-900 " />
+              </a>
+
+              <a href="">
+                <RiFacebookFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
+              </a>
+              <a href="">
+                <RiTwitterFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
+              </a>
+              <a href="">
+                < RiLinkedinFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
+              </a>
+              <a href="">
+                <RiYoutubeFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
+              </a>
+              <a href="">
+                <RiInstagramFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
+              </a>
+
             </div>
           </DialogPanel>
         </Dialog>
@@ -229,6 +293,7 @@ export default function Navebar() {
 
 
 
+// FlyoutLink
 
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
   const [open, setOpen] = useState(false);
@@ -277,65 +342,68 @@ const Explore = () => {
     <>
       <h3 className="font-semibold text-yellow-900  bg-white p-6 shadow-xl">Explore</h3>
 
-    <div className="fullwidth flex text-yellow-900  bg-white p-6 shadow-xl">
-      <div className="mb-3 flex-none space-y-3">
-        
-        <a href="#" className="block text-sm ">
-        <Card className="card-dtl card-child-1">
-      <CardBody>
-        <Typography variant="h5">
-          UI/UX Review Check
-        </Typography>
-        <Typography>
-          just
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0 ">
-        <Button className="px-3 py-2 bg-black">Read More</Button>
-      </CardFooter>
-    </Card>
-        </a>
-       
-      </div>
-      <div className="mb-3  flex-none space-y-3">
-        
-        <a href="#" className="block text-sm hover:underline">
-        <Card className="card-dtl card-child-1">
-      <CardBody>
-        <Typography variant="h5">
-          UI/UX Review Check
-        </Typography>
-        <Typography>
-          just
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0 ">
-        <Button className="px-3 py-2 bg-black">Read More</Button>
-      </CardFooter>
-    </Card>
-        </a>
-      </div>
-      <div className="mb-3 flex-none space-y-3">
-       
-        <a href="#" className="block text-sm hover:underline">
-        <Card className="card-dtl card-child-1">
-      <CardBody>
-        <Typography variant="h5">
-          UI/UX Review Check
-        </Typography>
-        <Typography>
-          just
-        </Typography>
-      </CardBody>
-      <CardFooter className="pt-0 ">
-        <Button className="px-3 py-2 bg-black">Read More</Button>
-      </CardFooter>
-    </Card>
-        </a>
-      </div>
-      
+      <div className="fullwidth flex text-yellow-900  bg-white p-6 shadow-xl">
+        <div className="px-2 mb-3 flex-1 space-y-3">
 
-    </div>
+          <a href="#" className=" block text-sm ">
+            <Card className="card-dtl card-child-1 max-w-xs transition duration-300 ease-in-out hover:scale-110">
+
+              <CardBody>
+                <Typography variant="h5">
+                  Browse Profile
+                </Typography>
+                <Typography>
+
+                  1200+ VERIFIED PROFILE
+                </Typography>
+              </CardBody>
+              <CardFooter className="pt-0 ">
+                <Button className="px-3 py-2 bg-black">Read More</Button>
+              </CardFooter>
+
+            </Card>
+          </a>
+
+        </div>
+        <div className="mb-3  flex-1 space-y-3">
+
+          <a href="#" className="block text-sm ">
+            <Card className="card-dtl card-child-2 max-w-xs transition duration-300 ease-in-out hover:scale-110">
+              <CardBody>
+                <Typography variant="h5">
+                  Wedding Page
+                </Typography>
+                <Typography>
+                  MAKE A RESERVATION
+                </Typography>
+              </CardBody>
+              <CardFooter className="pt-0 ">
+                <Button className="px-3 py-2 bg-black">Read More</Button>
+              </CardFooter>
+            </Card>
+          </a>
+        </div>
+        <div className="px-2 mb-3 flex-1 space-y-3">
+
+          <a href="#" className="block text-sm ">
+            <Card className="card-dtl card-child-3  max-w-xs transition duration-300 ease-in-out hover:scale-110">
+              <CardBody>
+                <Typography variant="h5">
+                  ALL SERVICES
+                </Typography>
+                <Typography>
+                  LOREM IPSUM DUMMY
+                </Typography>
+              </CardBody>
+              <CardFooter className="pt-0 ">
+                <Button className="px-3 py-2 bg-black">Read More</Button>
+              </CardFooter>
+            </Card>
+          </a>
+        </div>
+
+
+      </div>
     </>
   );
 };
@@ -345,64 +413,104 @@ const Explore = () => {
 // All pages
 const Allpages = () => {
   return (
-    <div className="fullwidth flex flex-row text-yellow-900  bg-white p-6 shadow-xl">
-      <div className="mb-3 flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 1</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        ALL PROFILES
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PROFILE DETAILS
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         WEDDING
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         WEDDING VIDEO
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         OUR SERVICES
-        </a>
-      </div>
-      <div className="mb-3  flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 2</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        PRICING PLANING
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         LOGIN
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         SING-UP
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PHOTO GALLERY 1
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PHOTO GALLERY 2
-        </a>
-      </div>
-      <div className="mb-3 flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 3</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        CONTACT
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         ABOUT
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         ASK YOUR DOUBTS
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         FAQ
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         404
-        </a>
-      </div>
-      
+    <>
+      <div className="fullwidth flex flex-row text-yellow-900  bg-white p-6 shadow-xl">
+        <div className="mb-3 flex-none space-y-3">
+          <h3 className="font-semibold">PAGE SETS 1</h3>
+          <a href="#" className="block  text-sm hover:underline">
+            ALL PROFILES
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            PROFILE DETAILS
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            WEDDING
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            WEDDING VIDEO
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            OUR SERVICES
+          </a>
+        </div>
+        <div className="mb-3  flex-none space-y-3">
+          <h3 className="font-semibold">PAGE SETS 2</h3>
+          <a href="#" className="block  text-sm hover:underline">
+            PRICING PLANING
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            LOGIN
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            SING-UP
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            PHOTO GALLERY 1
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            PHOTO GALLERY 2
+          </a>
+        </div>
+        <div className="mb-3 flex-none space-y-3">
+          <h3 className="font-semibold">PAGE SETS 3</h3>
+          <a href="#" className="block  text-sm hover:underline">
+            CONTACT
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            ABOUT
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            ASK YOUR DOUBTS
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            FAQ
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            404
+          </a>
+        </div>
 
-    </div>
+
+      </div>
+
+      <hr />
+      <h3 className="font-semibold  text-yellow-900 px-12 pt-5  bg-white shadow-xl">USER DASHBOARD PAGES</h3>
+      <div className="fullwidth flex  text-yellow-900  bg-white p-6 shadow-xl">
+        <div className="mb-3  space-y-3">
+
+          <a href="#" className="block  text-sm hover:underline">
+            DASHBOARD
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            MY PLAN DETAILS
+          </a>
+
+        </div>
+        <div className="mb-3  space-y-3">
+
+          <a href="#" className="block  text-sm hover:underline">
+            MY PROFILE
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            PROFILE SETTINGS
+          </a>
+
+        </div>
+        <div className="mb-3  space-y-3">
+
+          <a href="#" className="block  text-sm hover:underline">
+            INTEREST
+          </a>
+          <a href="#" className="block text-sm hover:underline">
+            EDIT FULL PROFILE
+          </a>
+        </div>
+
+
+      </div>
+    </>
+
+
   );
 };
 
@@ -411,62 +519,36 @@ const Allpages = () => {
 // Toppages
 const Toppages = () => {
   return (
-    <div className="fullwidth flex flex-row text-yellow-900  bg-white p-6 shadow-xl">
-      <div className="mb-3 flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 1</h3>
+    <div className="topers text-yellow-900  bg-white p-6 shadow-xl">
+      <div className="mb-3  space-y-3">
+
         <a href="#" className="block  text-sm hover:underline">
-        ALL PROFILES
+          ALL PROFILES
         </a>
         <a href="#" className="block text-sm hover:underline">
-         PROFILE DETAILS
+          PROFILE DETAILS
         </a>
         <a href="#" className="block text-sm hover:underline">
-         WEDDING
+          WEDDING
         </a>
         <a href="#" className="block text-sm hover:underline">
-         WEDDING VIDEO
+          ABOUT
         </a>
         <a href="#" className="block text-sm hover:underline">
-         OUR SERVICES
+          CONTACT
+        </a>
+        <a href="#" className="block text-sm hover:underline">
+          LOGIN
+        </a>
+        <a href="#" className="block text-sm hover:underline">
+          SIGN-UP
+        </a>
+        <a href="#" className="block text-sm hover:underline">
+          PRICING PLANS
         </a>
       </div>
-      <div className="mb-3  flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 2</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        PRICING PLANING
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         LOGIN
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         SING-UP
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PHOTO GALLERY 1
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PHOTO GALLERY 2
-        </a>
-      </div>
-      <div className="mb-3 flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 3</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        CONTACT
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         ABOUT
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         ASK YOUR DOUBTS
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         FAQ
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         404
-        </a>
-      </div>
-      
+
+
 
     </div>
   );
@@ -476,62 +558,34 @@ const Toppages = () => {
 // Dashboard
 const Dashboard = () => {
   return (
-    <div className="fullwidth flex flex-row text-yellow-900  bg-white p-6 shadow-xl">
-      <div className="mb-3 flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 1</h3>
+    <div className="topers text-yellow-900  bg-white p-6 shadow-xl">
+      <div className="mb-3  space-y-3">
+
         <a href="#" className="block  text-sm hover:underline">
-        ALL PROFILES
+          DASHBOARD
         </a>
         <a href="#" className="block text-sm hover:underline">
-         PROFILE DETAILS
+          MY PROFILE
         </a>
         <a href="#" className="block text-sm hover:underline">
-         WEDDING
+          INTEREST
         </a>
         <a href="#" className="block text-sm hover:underline">
-         WEDDING VIDEO
+          MY PLAN DETAILS
         </a>
         <a href="#" className="block text-sm hover:underline">
-         OUR SERVICES
+          PROFILE SETTINGS
         </a>
+        <a href="#" className="block text-sm hover:underline">
+          EDIT FULL PROFILE
+        </a>
+        <a href="#" className="block text-sm hover:underline">
+          SIGN-UP
+        </a>
+
       </div>
-      <div className="mb-3  flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 2</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        PRICING PLANING
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         LOGIN
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         SING-UP
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PHOTO GALLERY 1
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         PHOTO GALLERY 2
-        </a>
-      </div>
-      <div className="mb-3 flex-none space-y-3">
-        <h3 className="font-semibold">PAGE SETS 3</h3>
-        <a href="#" className="block  text-sm hover:underline">
-        CONTACT
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         ABOUT
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         ASK YOUR DOUBTS
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         FAQ
-        </a>
-        <a href="#" className="block text-sm hover:underline">
-         404
-        </a>
-      </div>
-      
+
+
 
     </div>
   );
