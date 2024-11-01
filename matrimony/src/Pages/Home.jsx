@@ -2,6 +2,7 @@ import React from 'react'
 import Navebar from './Navebar'
 import '../assets/css/home.css'
 import ContNav from './ContNav'
+import Temp from './Temp'
 // import {motion} from 'framer-motion'
 // import Logo from '../assets/images/logo-a.png'
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       {/* nav-bar-start */}
       <ContNav />
       <Navebar />
+    
       {/* nav-bar-end */}
       <div className="relative px-6 bg-img text-white  lg:px-8">
         <div
