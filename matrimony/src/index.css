@@ -6,3 +6,12 @@
 body{
     font-family: Poppins, sans-serif;
 }
+
+@layer components {
+    .btn-primary {
+      @apply py-2 px-5 bg-[#607d8b] text-white font-semibold rounded-full shadow-md hover:bg-yellow-800 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+    }
+    .btn-primary2 {
+      @apply py-2 px-5 bg-black text-white  font-semibold rounded shadow-md hover:bg-yellow-800 focus:outline-none focus:ring focus:ring-violet-400 focus:ring-opacity-75;
+    }
+  }

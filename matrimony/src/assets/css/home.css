@@ -1,6 +1,61 @@
 .bg-img{
     background: url(../images/baner.jpg) no-repeat;
     background-size:cover;
-    
+    background-position:top;  
     
 }
+
+.our-ser-bg{
+    background: url(../images/ourservices/bg.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+    
+}
+
+.our-ser-bg0{
+    background: url(../images/ourservices/bg0.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+  
+}
+.our-ser-bg1{
+    background: url(../images/ourservices/bg1.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+    
+}
+.our-ser-bg2{
+    background: url(../images/ourservices/bg2.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+}
+.our-ser-bg3{
+    background: url(../images/ourservices/bg3.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+
+}
+.our-ser-bg4{
+    background: url(../images/ourservices/pg4.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+}
+.our-ser-bg5{
+    background: url(../images/ourservices/pg5.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+   
+}
+.our-ser-bg6{
+    background: url(../images/ourservices/pg6.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+   
+}
+.our-ser-bg7{
+    background: url(../images/ourservices/pg7.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;  
+  
+}
+

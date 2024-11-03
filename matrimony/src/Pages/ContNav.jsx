@@ -29,7 +29,7 @@ export default function ContNav() {
                                 data-twe-navbar-nav-ref>
                                 {/* <!-- SEARCH ICON link --> */}
                                 <li
-                                    class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2"
+                                    class="my-4 ps-2 lg:my-0 list lg:pe-1 lg:ps-2"
                                     data-twe-nav-item-ref>
                                     <a
                                         class="lg:px-2"
@@ -41,7 +41,7 @@ export default function ContNav() {
                                 </li>
                                 {/* <!-- About link --> */}
                                 <li
-                                    class="my-4 ps-2 lg:my-0 lg:pe-1 left-item left-item lg:ps-2"
+                                    class="my-4 ps-2 lg:my-0 list lg:pe-1 left-item left-item lg:ps-2"
                                     data-twe-nav-item-ref>
                                     <a
                                         class=" lg:px-2 "
@@ -53,7 +53,7 @@ export default function ContNav() {
                                 </li>
                                 {/* <!-- FAQ link --> */}
                                 <li
-                                    class="my-4 ps-2 lg:my-0 lg:pe-1 left-item lg:ps-2"
+                                    class="my-4 ps-2 lg:my-0 list lg:pe-1 left-item lg:ps-2"
                                     data-twe-nav-item-ref>
                                     <a
                                         class="lg:px-2 "
@@ -65,7 +65,7 @@ export default function ContNav() {
                                 </li>
                                 {/* <!-- Contact link --> */}
                                 <li
-                                    class="my-4 ps-2 lg:my-0 lg:pe-1 left-item lg:ps-2"
+                                    class="my-4 ps-2 lg:my-0 list lg:pe-1 left-item lg:ps-2"
                                     data-twe-nav-item-ref>
                                     <a
                                         class="lg:px-2 "
@@ -84,7 +84,7 @@ export default function ContNav() {
                                         data-twe-navbar-nav-ref>
                                         {/* <!-- CONTACT NUMBER link --> */}
                                         <li
-                                            class="my-4 ps-2 lg:my-0 right-item lg:pe-1 lg:ps-2"
+                                            class="my-4 ps-2 lg:my-0 list right-item lg:pe-1 lg:ps-2"
                                             data-twe-nav-item-ref>
                                             <a
                                                 class="lg:px-2 "
@@ -96,7 +96,7 @@ export default function ContNav() {
                                         </li>
                                         {/* <!-- FAQ link --> */}
                                         <li
-                                            class="my-4 ps-2 lg:my-0 right-item  lg:pe-1 lg:ps-2"
+                                            class="my-4 ps-2 lg:my-0 list right-item  lg:pe-1 lg:ps-2"
                                             data-twe-nav-item-ref>
                                             <a
                                                 class="lg:px-2 "
@@ -108,7 +108,7 @@ export default function ContNav() {
                                         </li>
                                         {/* <!-- Contact link --> */}
                                         <li
-                                            class="my-4 ps-2 lg:my-0 right-item lg:pe-1 lg:ps-2"
+                                            class="my-4 ps-2 lg:my-0 list right-item lg:pe-1 lg:ps-2"
                                             data-twe-nav-item-ref>
                                             <a
                                                 class="lg:px-2 "
@@ -120,7 +120,7 @@ export default function ContNav() {
                                         </li>
                                         {/* <!-- Contact link --> */}
                                         <li
-                                            class="my-4 ps-2 lg:my-0 right-item lg:pe-1 lg:ps-2"
+                                            class="my-4 ps-2 lg:my-0 list right-item lg:pe-1 lg:ps-2"
                                             data-twe-nav-item-ref>
                                             <a
                                                 class="lg:px-2 "
@@ -133,7 +133,7 @@ export default function ContNav() {
 
                                         {/* <!-- WATS APP ICON link --> */}
                                         <li
-                                            class="my-4 ps-2 lg:my-0 lg:pe-1 lg:ps-2"
+                                            class="my-4 ps-2 lg:my-0 list lg:pe-1 lg:ps-2"
                                             data-twe-nav-item-ref>
                                             <a
                                                 class=""

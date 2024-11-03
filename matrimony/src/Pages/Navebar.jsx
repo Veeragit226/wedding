@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
+import { Dialog, DialogPanel,DialogBackdrop, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../assets/images/logo-a.png'
 import Profile from '../assets/images/profile.png'
@@ -68,7 +68,9 @@ export default function Navebar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-full p-2.5 text-white  animate-ping relative  bg-yellow-600"
+              className="-m-2.5 inline-flex items-center justify-center animate-ping rounded-full p-2.5 text-white  
+              {animate-ping}
+              relative  bg-yellow-600"
             >
               <span className=" sr-only">Open main menu</span>
               <Bars3Icon aria-hidden="true" className=" h-6 w-6" />
@@ -161,7 +163,11 @@ export default function Navebar() {
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed  inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <DialogBackdrop
+        transition
+        className="fixed inset-0 bg-gray-900 bg-opacity-75 transition-opacity duration-500 ease-in-out data-[closed]:opacity-0"
+      />
+          <DialogPanel className="fixed  inset-y-0 right-0 z-50 w-full  overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
