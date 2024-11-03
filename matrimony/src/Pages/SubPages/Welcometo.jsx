@@ -1,4 +1,4 @@
-import React from 'react'
+// import React, { useState } from 'react'
 import wel from '../../assets/images/Welcometo/wel.png'
 
 
@@ -11,7 +11,7 @@ const stats = [
 ]
 function Welcometo() {
 
-
+// const [imgoper,setImgeopen]=useState[false]
 
   return (
     <div className='bg-[#fefbf5]'>
@@ -19,20 +19,17 @@ function Welcometo() {
 
 
 
-
         <div className="container px-6 py-10 mx-auto">
 
-          <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-            <div className="lg:flex">
-
-
+          <div className="grid  grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+            <div className="lg:flex hidden sm:block" >
               <img
                 className="object-cover w-full  "
                 src={wel}
                 alt=""
               />
             </div>
-            <div className="lg:flex justify-center   text-start flex-col">
+            <div className="lg:flex justify-center    text-start flex-col">
               <h1 className="object-cover w-full text-[#66451c] text-balance text-xl  lg:text-5xl  font-semibold tracking-wide ">
                 WELCOME TO <span className='block text-[#e5026b] py-3'>WEDDING MATRIMONY</span>
               </h1>
@@ -70,6 +67,17 @@ function Welcometo() {
              
 
 
+             <section className="text-md text-center justify-center text-yellow-900 border border-yellow-950 flex rounded-xl p-5 gap-10  lg:text-2xl">
+          {stats.map((stat) => (
+            <div key={stat.id} className="">
+              <h1 className="order-first text-3xl font-semibold tracking-tight ">
+                {stat.value}<span className="block text-base/7 ">{stat.name}</span>
+              </h1>
+              
+              
+            </div>
+          ))}
+        </section>
 
 
 
@@ -84,21 +92,7 @@ function Welcometo() {
 
 
 
-        <div className=" py-5 sm:py-10">
-      <div className="mx-auto rounded-xl   max-w-7xl px-6 lg:px-8">
-        <dl className="grid grid-cols-1 gap-x-8 gap-y-16 text-center  lg:grid-cols-3">
-          {stats.map((stat) => (
-            <div key={stat.id} className="mx-auto   rounded my-5 flex text-yellow-900 max-w-xs flex-col p-1 sm:p-5 gap-y-4">
-              <dt className="text-base/7 ">{stat.name}</dt>
-              <dd className="order-first text-3xl font-semibold tracking-tight  sm:text-5xl">
-                {stat.value}
-              </dd>
-            </div>
-          ))}
-        </dl>
-      </div>
-    </div>
-
+     
 
 
 

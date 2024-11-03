@@ -41,6 +41,7 @@ import Footer from './Footer';
 import Whychooseus from './SubPages/Whychooseus';
 import Welcometo from './SubPages/Welcometo';
 import HowWorks from './SubPages/HowWorks';
+import TrustedCouples from './SubPages/TrustedCouples';
 
 
 // import {motion} from 'framer-motion'
@@ -105,18 +106,18 @@ function Home() {
         <div className="mx-auto max-w-6xl px-5  justify-between p-4  sm:py-40  lg:py-46">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           </div>
-          <div className="text-center ">
-            <h1 className="text-balance text-2xl font-semibold tracking-wide pb-5  sm:text-4xl">
+          <div className="text-center  ">
+            <h1 className="text-balance text-xl font-semibold tracking-wide   sm:text-4xl">
               #1 Matrimony
             </h1>
-            <h1 className="text-balance text-5xl font-semibold tracking-wide pb-5  sm:text-7xl">
+            <h1 className="text-balance text-3xl font-semibold tracking-wide  sm:text-7xl">
               Find Your
               <br />
               <span className='text-[#f00]'> Right Match </span> here
             </h1>
             <h1 className="text-balance text-5xl font-semibold tracking-tight pb-2  sm:text-7xl">
             </h1>
-            <p className=" text-pretty text-lg font-medium">
+            <p className=" text-pretty text-sm sm:text-lg font-medium">
               Most Trusted Matrimony Platform in the world.
             </p>
 
@@ -691,6 +692,8 @@ function Home() {
       {/* How its works */}
       <HowWorks/>
 
+      {/* Trusted brand couples */}
+      <TrustedCouples/>
       {/* footer */}
       <Footer />
     </>
