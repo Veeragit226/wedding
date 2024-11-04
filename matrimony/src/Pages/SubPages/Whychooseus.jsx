@@ -13,7 +13,7 @@ function Whychooseus() {
                 </div>
             </div> */}
             <div className='bg sm:bg-hidden'>
-            <section  className="  max-w-6xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+            <section  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
 
             <div className="text-center  tracking-wide text-balance pb-12">
                         <h2 className="text-base font-bold text-yellow-300 ">
@@ -26,7 +26,7 @@ function Whychooseus() {
                         Most Trusted and premium Matrimony Service in the World.
                         </h2>
                     </div>
-                <div className="grid items-center justify-center grid-cols-1  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+                <div className="grid items-center justify-center grid-cols-1  sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 gap-6">
                    
                     <div className="w-full  shadow-md hover:shadow-2xl bg-white rounded-lg px-7  py-7 flex flex-col justify-center items-center">
                         <div className="mb-8">
@@ -65,7 +65,7 @@ function Whychooseus() {
                         <div className="text-center text-yellow-900">
                             <p className="text-lg font-bold mb-2">2000+ weddings
                            </p>
-                            <p className="text-sm  font-normal"> Lakhs of peoples have found their life partner</p>
+                            <p className="text-sm  font-normal"> Lakhs of peoples have found their life partner lorem</p>
                         </div>
                     </div>
                    

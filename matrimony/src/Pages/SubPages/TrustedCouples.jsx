@@ -75,10 +75,6 @@ function TrustedCouples() {
 
             itemClass="carousel-item-padding-40-px">
 
-
-
-
-
             <Card
               shadow={false}
               className="relative grid h-[65vh] w-full max-w-[30rem]  items-center justify-center  overflow-hidden text-center"

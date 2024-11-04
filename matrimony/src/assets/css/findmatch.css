@@ -1,0 +1,17 @@
+.bottom-bg{
+    background: url(../images/bottom.png);
+    background-size:contain;
+   /* animation-name: running;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   position: relative;  */
+}
+/* @keyframes running {
+    0%   {left:0px; right:10px;}
+    25%   {left:10px; right:0px;}
+    50%   {left:0px; right:10px;}
+    75%   {left:10px; right:0px;}
+    100%   {left:0px; right:10px;}
+   
+    
+} */

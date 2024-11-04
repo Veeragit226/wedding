@@ -68,7 +68,7 @@ export default function Navebar() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center  rounded-full p-2.5 text-white  
+              className="-m-2.5 inline-flex items-center justify-center animate-ping  rounded-full p-2.5 text-white  
               {animate-ping}
               relative  bg-yellow-600"
             >
