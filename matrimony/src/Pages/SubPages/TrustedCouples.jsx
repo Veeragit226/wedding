@@ -2,25 +2,16 @@ import React from 'react'
 // import ReactCardSlider from 'react-card-slider-component'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+// import test from '../../assets/images/meetOurTeam/meet1.jpg'
 
 import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
-    Typography,
-    Avatar,
-    Button
+   
   } from "@material-tailwind/react";
 
-  import servector1 from '../../assets/images/ourservices/vector1.png'
-  import servector2 from '../../assets/images/ourservices/vector5.png'
-  import servector3 from '../../assets/images/ourservices/vector4.png'
-  import servector4 from '../../assets/images/ourservices/vector1.png'
-  import servector5 from '../../assets/images/ourservices/vector5.png'
-  import servector6 from '../../assets/images/ourservices/vector4.png'
-  import servector7 from '../../assets/images/ourservices/vector1.png'
-  import servector8 from '../../assets/images/ourservices/vector5.png'
+
 
 function TrustedCouples() {
 
@@ -47,11 +38,15 @@ function TrustedCouples() {
 
   return (
     <div className=' bg-[#fcfcfc]'>
-        <div className=" mx-auto  justify-center items-center  text-center  justify-between py-20 ">
+        <div className=" mx-auto  justify-center items-center  text-center  justify-between p-5 ">
           <h1 className='text-[#c48c46] text-balance text-xl font-semibold tracking-wide pb-5  sm:text-2xl'>Trusted Brand</h1>
           <h1 className='text-[#66451c] text-balance text-4xl font-semibold tracking-wide pb-5  sm:text-5xl'>Recent Couple</h1>
 
          
+
+
+
+
 
 
 
