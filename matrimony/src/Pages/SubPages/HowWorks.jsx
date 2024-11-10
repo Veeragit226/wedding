@@ -5,13 +5,12 @@ function HowWorks() {
   return (
     <div className=' bga'>
     
-     <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+     <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
     <div className="flex justify-center align-center flex-col md:grid grid-cols-9 mx-auto p-2 text-yellow-900">
       {/* left */}
       <div className="flex flex-row-reverse md:contents">
         <div className="bg-white col-start-1 col-end-5 p-4 rounded-xl my-4 ml-auto shadow-md">
-          <h3 className="font-semibold text-lg mb-1">Register
-</h3>
+          <h3 className="font-semibold text-lg mb-1">Register</h3>
           <p className="leading-tight text-justify">
           
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.

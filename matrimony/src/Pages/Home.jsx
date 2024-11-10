@@ -192,7 +192,7 @@ function Home() {
 
 
       {/* OUR SERVICES */}
-      <div className='bg-black'>
+      <div className='bg-black '>
         <div className="mx-auto  max-w-7xl  text-center  justify-between py-5 ">
           <h1 className='text-[#c48c46] text-balance text-xl font-semibold tracking-wide pb-5  sm:text-2xl'>QUICK ACCESS</h1>
           <h1 className='text-[#c48c46] text-balance text-4xl font-semibold tracking-wide pb-5  sm:text-5xl'>OUR SERVICES</h1>
@@ -518,7 +518,7 @@ function Home() {
 
 
       {/* TRUSTED BRAND */}
-      <div className=' bg-[#fcfcfc]'>
+      <div className=' bg-[#fcfcfc] '>
         <div className=" mx-auto max-w-7xl justify-center items-center  text-center  justify-between py-20 ">
           <h1 className='text-[#c48c46] text-balance text-xl font-semibold tracking-wide pb-5  sm:text-2xl'>Trusted Brand</h1>
           <h1 className='text-[#66451c] text-balance text-4xl font-semibold tracking-wide pb-5  sm:text-5xl'>Trusted by 1500+ Couple</h1>

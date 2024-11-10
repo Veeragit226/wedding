@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from '../assets/images/logo-a1.png'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -28,12 +29,12 @@ function Footer() {
                 HELP & SUPPORT
               </p>
               <div className="flex flex-col items-start mt-5 space-y-2">
-                <a
+               <Link to={'/aboutus'}> <a
                   href="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   About Us
-                </a>
+                </a></Link>
                 <a
                   href="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
@@ -46,18 +47,18 @@ function Footer() {
                 >
                   Testimonials
                 </a>
-                <a
+               <Link to={'/contactus'}> <a
                   href="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   Contact Us
-                </a>
-                <a
+                </a></Link>
+               <Link to={'/faq'}> <a
                   href="#"
                   className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   FAQs
-                </a>
+                </a></Link>
               </div>
             </div>
             <div>

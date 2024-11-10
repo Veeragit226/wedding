@@ -37,7 +37,7 @@ function TrustedCouples() {
       };
 
   return (
-    <div className=' bg-[#fcfcfc]'>
+    <div className=' bg-[#fcfcfc] '>
         <div className=" mx-auto  justify-center items-center  text-center  justify-between p-5 ">
           <h1 className='text-[#c48c46] text-balance text-xl font-semibold tracking-wide pb-5  sm:text-2xl'>Trusted Brand</h1>
           <h1 className='text-[#66451c] text-balance text-4xl font-semibold tracking-wide pb-5  sm:text-5xl'>Recent Couple</h1>
@@ -68,7 +68,7 @@ function TrustedCouples() {
             deviceType
             dotListClass="custom-dot-list-style"
 
-            itemClass="carousel-item-padding-40-px">
+            itemClass="carousel-item-padding-40-px ">
 
             <Card
               shadow={false}

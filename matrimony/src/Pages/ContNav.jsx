@@ -5,6 +5,7 @@ import Logo from '../assets/images/logo-a.png'
 import Profile from '../assets/images/profile.png'
 import '../assets/css/contnav.css'
 import { FaSearch } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 
 
 export default function ContNav() {
@@ -28,7 +29,7 @@ export default function ContNav() {
                                 class="list-style-none me-auto flex flex-col ps-0   lg:flex-row"
                                 data-twe-navbar-nav-ref>
                                 {/* <!-- SEARCH ICON link --> */}
-                                <li
+                                {/* <li
                                     class="my-4 ps-2 lg:my-0 list lg:pe-1 lg:ps-2"
                                     data-twe-nav-item-ref>
                                     <a
@@ -38,42 +39,42 @@ export default function ContNav() {
                                         data-twe-nav-link-ref
                                     >SEARCH</a
                                     >
-                                </li>
+                                </li> */}
                                 {/* <!-- About link --> */}
                                 <li
                                     class="my-4 ps-2 lg:my-0 list lg:pe-1 left-item left-item lg:ps-2"
                                     data-twe-nav-item-ref>
-                                    <a
+                                   <Link to={'/aboutus'}> <a
                                         class=" lg:px-2 "
                                         aria-current="page"
                                         href="#"
                                         data-twe-nav-link-ref
                                     >ABOUT</a
-                                    >
+                                    ></Link>
                                 </li>
                                 {/* <!-- FAQ link --> */}
                                 <li
                                     class="my-4 ps-2 lg:my-0 list lg:pe-1 left-item lg:ps-2"
                                     data-twe-nav-item-ref>
-                                    <a
+                                    <Link to={'/faq'}><a
                                         class="lg:px-2 "
                                         aria-current="page"
                                         href="#"
                                         data-twe-nav-link-ref
                                     >FAQ</a
-                                    >
+                                    ></Link>
                                 </li>
                                 {/* <!-- Contact link --> */}
                                 <li
                                     class="my-4 ps-2 lg:my-0 list lg:pe-1 left-item lg:ps-2"
                                     data-twe-nav-item-ref>
-                                    <a
+                                    <Link to={'/contactus'}><a
                                         class="lg:px-2 "
                                         aria-current="page"
                                         href="#"
                                         data-twe-nav-link-ref
                                     >CONTACT</a
-                                    >
+                                    ></Link>
                                 </li>
                             </ul>
                             <div class="lg:pe-2">

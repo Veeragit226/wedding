@@ -25,7 +25,7 @@ function MeetOurteam() {
         <>
             <div className='bg-[#fffcf3] text-center  justify-between py-5'>
             <h1 className='text-[#c48c46] text-balance text-xl font-semibold tracking-wide pb-5  sm:text-2xl'>OUR PROFESSIONALS</h1>
-                    <h1 className='text-[#c48c46] text-balance text-4xl font-semibold tracking-wide pb-5  sm:text-5xl'>Meet Our Team</h1>
+                    <h1 className='text-yellow-900 text-balance text-4xl font-semibold tracking-wide pb-5  sm:text-5xl'>Meet Our Team</h1>
                    
                 <div className="mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  max-w-7xl  text-center  justify-between gap-4  items-center p-5 ">
                     
