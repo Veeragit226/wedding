@@ -1,18 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navebar from './Navebar'
 import Footer from './Footer'
 import Asyk from '../assets/images/askyourdoubts/image.png'
 import { Textarea } from '@headlessui/react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import ContNav from './ContNav'
+import axios from 'axios'
 
 function Login() {
+
+
+    const [formData, setFormData] = useState({ email: "", password: "" });
+
+    const navigate =useNavigate()
+    const handleChange = (e) => {
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      try {
+        const { data } = await axios.post("http://localhost:3001/api/auth/login", formData);
+        localStorage.setItem("token", data.token);
+        alert("Logged in successfully");
+        navigate('/')
+      } catch (error) {
+        console.error("Error logging in:", error);
+        console.log(formData)
+      }
+    }
     return (
         <>
 
 
             {/* navbar */}
-<ContNav/>
+            <ContNav />
             <Navebar />
 
 
@@ -30,14 +52,14 @@ function Login() {
 
 
 
-                           
+
                             <div className='flex object-cover  animate-pulse  h-20 bottom-bg items-end'>
 
                             </div>
                         </div>
 
                         {/* Right Section (Form) */}
-                        <form className=" md:col-span-2 w-full py-6 px-6 sm:px-16">
+                        <form onSubmit={handleSubmit} className=" md:col-span-2 w-full py-6 px-6 sm:px-16">
 
                             <div className=" text-gray-900 mb-6 font-medium text-3xl ">
                                 <h2 className=' font-light text-[15px]'>Start for free</h2>
@@ -45,13 +67,14 @@ function Login() {
                                 <h2 className='text-amber-950 text-[15px] font-medium'>Not a Member? <a className='text-blue-500' href="Login"><Link to={'/signup'}> Sign Up Now</Link></a></h2>
                             </div>
                             <div className="space-y-6">
-                              
+
 
                                 {/* Email Field */}
                                 <div>
                                     <label className="text-gray-800 text-sm mb-2 block">Email Id:</label>
                                     <div className="relative flex items-center">
                                         <input
+                                            onChange={handleChange}
                                             name="email"
                                             type="email"
                                             required
@@ -66,19 +89,20 @@ function Login() {
                                     <label className="text-gray-800 text-sm mb-2 block">Password:</label>
                                     <div className="relative flex items-center">
                                         <input
+                                            onChange={handleChange}
                                             name="password"
                                             type="password"
                                             required
                                             className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500 "
-                                            placeholder="Enter your password" 
-                                            
+                                            placeholder="Enter your password"
+
                                         />
 
                                     </div>
                                 </div>
 
 
-                               
+
 
 
                                 {/* Remember me */}
@@ -91,7 +115,7 @@ function Login() {
                                     />
                                     <label htmlFor="remember-me" className="ml-3 block text-sm text-gray-800">
                                         Remember Me
-                                        
+
                                     </label>
                                 </div>
 

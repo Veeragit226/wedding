@@ -1,18 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navebar from './Navebar'
 import Footer from './Footer'
 import Asyk from '../assets/images/askyourdoubts/image.png'
 import { Textarea } from '@headlessui/react'
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 import ContNav from './ContNav'
+import axios from 'axios'
+
+
 
 function Signup() {
+
+    const [formData, setFormData] = useState([
+        {
+            name: "",
+            age: "",
+
+            email: "",
+            phone: "",
+            caste: "",
+            dob: "",
+            state: "",
+            district: "",
+            height: "",
+            weight: "",
+            education: "",
+            working: "",
+
+            password: "",
+            description: "",
+            gender: ""
+
+        }]);
+    const navigate = useNavigate()
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            await axios.post("http://localhost:5000/auth/signup", formData ,{withCredentials:true});
+            alert("Registered successfully");
+            navigate('/login')
+        } catch (error) {
+            console.error("Error registering:", error);
+        }
+    };
+
+
+
     return (
         <>
-
-
             {/* navbar */}
-<ContNav/>
+            <ContNav />
             <Navebar />
 
 
@@ -39,7 +81,7 @@ function Signup() {
                         </div>
 
                         {/* Right Section (Form) */}
-                        <form className=" md:col-span-2 w-full py-6 px-6 sm:px-16">
+                        <form onSubmit={handleSubmit} className=" md:col-span-2 w-full py-6 px-6 sm:px-16">
 
                             <div className=" text-gray-900 mb-6 font-medium text-3xl ">
                                 <h2 className=' font-light text-[15px]'>Start for free</h2>
@@ -54,7 +96,23 @@ function Signup() {
                                     <label className="text-gray-800 text-sm mb-2 block">Name:</label>
                                     <div className="relative flex items-center">
                                         <input
+                                            onChange={handleChange}
                                             name="name"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+                                {/* Age Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Age:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="age"
                                             type="text"
                                             required
                                             className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
@@ -68,6 +126,7 @@ function Signup() {
                                     <label className="text-gray-800 text-sm mb-2 block">Email Id:</label>
                                     <div className="relative flex items-center">
                                         <input
+                                            onChange={handleChange}
                                             name="email"
                                             type="email"
                                             required
@@ -77,12 +136,14 @@ function Signup() {
 
                                     </div>
                                 </div>
+
                                 {/* Phone Number */}
                                 <div>
                                     <label className="text-gray-800 text-sm mb-2 block">Phone Number:</label>
                                     <div className="relative flex items-center">
                                         <input
-                                            name="phone number"
+                                            onChange={handleChange}
+                                            name="phone"
                                             type="number"
                                             required
                                             className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
@@ -91,17 +152,190 @@ function Signup() {
 
                                     </div>
                                 </div>
+
+                                {/* caste Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Caste:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="caste"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* DOB Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">DOB:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="dob"
+                                            type="date"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* State Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">State:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="state"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* District Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">District:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="district"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* Height Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Height:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="height"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+                                {/* Weight Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Weight:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="weight"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* Education Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Education:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="education"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* working Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Working:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="working"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+
+
                                 {/* Password */}
                                 <div>
                                     <label className="text-gray-800 text-sm mb-2 block">Password:</label>
                                     <div className="relative flex items-center">
                                         <input
+                                            onChange={handleChange}
                                             name="password"
                                             type="password"
                                             required
                                             className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500 "
                                             placeholder="Enter your password"
 
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* Description Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Description:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="description"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
+                                        />
+
+                                    </div>
+                                </div>
+
+
+                                {/* Gender Field */}
+                                <div>
+                                    <label className="text-gray-800 text-sm mb-2 block">Gender:</label>
+                                    <div className="relative flex items-center">
+                                        <input
+                                            onChange={handleChange}
+                                            name="gender"
+                                            type="text"
+                                            required
+                                            className="text-gray-800 bg-white border border-gray-300 w-full text-sm px-4 py-2.5 rounded-md outline-blue-500"
+                                            placeholder="Enter Name"
                                         />
 
                                     </div>
@@ -120,7 +354,7 @@ function Signup() {
                                         className="h-4 w-4 shrink-0 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                                     />
                                     <label htmlFor="remember-me" className="ml-3 block text-sm text-gray-800">
-                                    Creating an account means you’re okay with our Terms of Service, Privacy Policy, and our default Notification Settings.
+                                        Creating an account means you’re okay with our Terms of Service, Privacy Policy, and our default Notification Settings.
 
                                     </label>
                                 </div>
@@ -134,6 +368,7 @@ function Signup() {
                             {/* Submit Button */}
                             <div className="!mt-12">
                                 <button
+
                                     type="submit"
                                     className="w-full py-3 px-4 tracking-wider text-sm rounded-md text-white bg-gray-700 hover:bg-gray-800 focus:outline-none"
                                 >

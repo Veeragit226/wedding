@@ -669,6 +669,8 @@ function Home() {
 
       {/* whycoose us */}
 
+
+
       <Whychooseus />
 
 
