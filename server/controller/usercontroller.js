@@ -108,7 +108,6 @@ const resetpassword=async (req,res)=>{
 
 const resetPasswordToken=async(req,res)=>{
     const {token} = req.params;
-    
     const {password} = req.body;
 
 

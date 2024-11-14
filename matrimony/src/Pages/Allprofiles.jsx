@@ -3,7 +3,7 @@ import Navebar from './Navebar'
 import Footer from './Footer'
 import herosec from '../assets/images/allprofile.jpg'
 
-import { FaRegBell, FaRegClock, FaSearch, FaShieldAlt } from "react-icons/fa";
+import { FaRegBell, FaRegClock, FaRegHeart, FaSearch, FaShieldAlt } from "react-icons/fa";
 import {  IoLocationOutline } from 'react-icons/io5';
 import { AiOutlineLike } from "react-icons/ai";
 
@@ -14,22 +14,25 @@ import {
     CardBody,
     CardFooter
   } from "@material-tailwind/react";
-  import sample from '../assets/images/userDashboard/1.jpg'
+  import image from '../assets/images/userDashboard/1.jpg'
+  import image2 from '../assets/images/userDashboard/2.jpg'
+  import image3 from '../assets/images/userDashboard/3.jpg'
+  import image4 from '../assets/images/userDashboard/13.jpg'
+  import image5 from '../assets/images/userDashboard/14.jpg'
+  import image6 from '../assets/images/userDashboard/16.jpg'
 import ContNav from './ContNav';
+import { Link } from 'react-router-dom';
 
 function Allprofiles() {
 
     const newrequest = [
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
-        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details' },
+        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details', src:image,alt:"image1"  },
+        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details', src:image2,alt:"image2" },
+        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details', src:image3,alt:"image3" },
+        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details', src:image4,alt:"image4" },
+        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details', src:image5,alt:"image5" },
+        { name: 'Rashma', course:'B.sc', proffession: 'IT', Age:'25 Years Old', Height:'5.6',intrest:'Send Intrest', details:'More Details', src:image6,alt:"image6" },
+
        
     ]
     return (
@@ -56,12 +59,13 @@ function Allprofiles() {
                         Lakhs of Happy Marriages
                     </h1>
 
-                    <a
+                    <Link to={'/plan'}  className=" text-white border border-white backdrop-blur-xl  py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"> <a
                         href="#"
-                        className=" text-white border border-white backdrop-blur-xl  py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+                       
                     >
+
                         Join Now For Free
-                    </a>
+                    </a></Link>
                 </div>
             </div>
 
@@ -188,12 +192,12 @@ function Allprofiles() {
             <h1 className='lg:text-xl'>Showing Profiles</h1>    
            
               {newrequest.map((tab) => {
-                const { name, course,proffession,Age,Height,intrest,details } = tab;
+                const { name, course,proffession,Age,Height,intrest,details,src,alt } = tab;
                 return (
                   <>
-                   <Card className='w-full p-2 my-5   max-w-9xl grid text-yellow-900 justify-center text-start grid-cols-1 md:grid-cols-4 sm:grid-cols-1  lg:grid-cols-4'>
+                   <Card className='w-full p-2 my-5 shadow transition-all hover:shadow-xl  max-w-9xl grid text-yellow-900 justify-center text-start grid-cols-1 md:grid-cols-4 sm:grid-cols-1  lg:grid-cols-4'>
                     <CardHeader className='bg-yellow-900 max-w-xl ' >
-                      <img key={name} src={sample} alt="" className='object-cover  h-full' />
+                      <img key={name} src={src} alt={alt} className='object-cover transition-all hover:scale-110  h-full' />
                       
                     </CardHeader>
                     <CardBody className=' cols-grow col-span-2'>
@@ -269,7 +273,7 @@ function Allprofiles() {
                     <CardFooter className='col-span-1 text-sm font-light'>
                       <div className='flex flex-wrap justify-end gap-2'>
                       <div className="btn-support">
-                                        <AiOutlineLike  />
+                                        <FaRegHeart/>
                                     </div>
                     </div>
                     </CardFooter>

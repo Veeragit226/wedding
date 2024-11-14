@@ -6,8 +6,7 @@ import ContNav from './ContNav'
 import axios from 'axios'
 
 function Resetpassword() {
-
-
+    
     const [formData, setFormData] = useState({ email:"", password: "", otp:"" });
 
     const navigate =useNavigate()
@@ -16,11 +15,17 @@ function Resetpassword() {
     };
   
     const handleSubmit = async (e) => {
+        const VerificationOtp = localStorage.getItem("token")
+        console.log("verifyotp",VerificationOtp)
       e.preventDefault();
-      try {
-        const  data  = await axios.post(`http://localhost:5000/api/reset-password/${formData.otp}`, {
-            email:formData.email,password:formData.password,otp:formData.otp
+      try { 
+        console.log("Verifing_TOken", formData.otp)
+        const  data  = await axios.post(`http://localhost:5000/api/reset-password/${VerificationOtp}`, {
+            // email:formData.email,
+            // password:formData.password,
+            otp:formData.otp
         });
+        console.log("Data", )
         localStorage.setItem("token", data.otp);
 
          console.log('Response:', data);
