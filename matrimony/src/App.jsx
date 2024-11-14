@@ -16,6 +16,14 @@ import Contactus from './Pages/Contactus'
 import Error from './Pages/Error'
 import Pricingplans from './Pages/Pricingplans'
 import Allprofiles from './Pages/Allprofiles'
+import Forgotpassword from './Pages/Forgotpassword'
+import Otp from './Pages/Otp'
+import Resetpassword from './Pages/Resetpassword'
+import Profiledetails from './Pages/Profiledetails'
+import Dhome from './Pages/Dummylandingpage/Dhome'
+import Dnav from './Pages/Dummylandingpage/Dnav'
+import Newsignup from './Pages/Newusers/Newsignup'
+import Newlogin from './Pages/Newusers/Newlogin'
 // import Temp from './Pages/Temp'
 
 function App() {
@@ -25,7 +33,11 @@ function App() {
     <>   
 
     <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Dhome/>}/>
+      <Route path='/newsignup' element={<Newsignup/>}/>
+      <Route path='/newlogin' element={<Newlogin/>}/>
+      
+      <Route path='/home' element={<Home/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/intrest' element={<Intrest/>}/>
@@ -41,6 +53,10 @@ function App() {
       <Route path='/error' element={<Error/>}/>
       <Route path='/plan' element={<Pricingplans/>}/>
       <Route path='/allprofiles' element={<Allprofiles/>}/>
+      <Route path='/forgotpassword' element={<Forgotpassword/>}/>
+      <Route path='/otp' element={<Otp/>}/>
+      <Route path='/resetpassword' element={<Resetpassword/>}/>
+      <Route path='/profiles-details' element={<Profiledetails/>}/>
       
     </Routes> 
    

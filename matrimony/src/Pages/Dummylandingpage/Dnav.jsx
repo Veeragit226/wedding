@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel,DialogBackdrop, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Logo from '../assets/images/logo-a.png'
-import Profile from '../assets/images/profile.png'
-import '../assets/css/nav.css'
+import Logo from '../../assets/images/logo-a.png'
+import Profile from '../../assets/images/profile.png'
+import '../../assets/css/nav.css'
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from 'react-router-dom'
 import { RiYoutubeFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill, RiFacebookFill, RiTwitterFill } from "react-icons/ri";
@@ -45,19 +45,20 @@ const all = [
 const user = [
   { name: 'veerapandiyan', headding: 'user' }
 ]
-export default function Navebar() {
+export default function Dnav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
 
   return (
     <>
+    
       <header className="sticky bg-white inset-x-0 top-0 z-top  shadow-md ">
         <nav aria-label="Global" className="mx-auto max-w-7xl px-5 flex items-center justify-between p-4 lg:px-8">
           <div className="flex lg:flex-1">
 
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <Link to={'/home'}>
+              <Link to={'/'}>
               <img
                 alt=""
                 src={Logo}
@@ -94,25 +95,26 @@ export default function Navebar() {
             ))} */}
 
 
-            <FlyoutLink href="#" className="text-sm/5   " FlyoutContent={Explore}>
-              EXPLORE
+
+            <FlyoutLink href="#" className="text-sm/5   ">
+            <Link to={'/newlogin'}> EXPLORE </Link>
             </FlyoutLink>
-            <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Allpages}>
-              ALL PAGES
-            </FlyoutLink>
-            <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Toppages}>
-              TOP PAGES
+            <FlyoutLink href="#" className="text-sm/5  ">
+            <Link to={'/newlogin'}> ALL PAGES </Link>
             </FlyoutLink>
             <FlyoutLink href="#" className="text-sm/5  " >
-             <Link to={'/plan'}> PLANING </Link>
+             <Link to={'/newlogin'}> TOP PAGES</Link>
             </FlyoutLink>
             <FlyoutLink href="#" className="text-sm/5  " >
-            <Link to={'/signup'}>
+             <Link to={'/newlogin'}> PLANING </Link>
+            </FlyoutLink>
+            <FlyoutLink href="#" className="text-sm/5  " >
+            <Link to={'/newsignup'}>
               REGISTER</Link>
             </FlyoutLink>
-            <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Dashboard}>
+            {/* <FlyoutLink href="#" className="text-sm/5  " FlyoutContent={Dashboard}>
               DASHBOARD
-            </FlyoutLink>
+            </FlyoutLink> */}
 
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
@@ -153,16 +155,16 @@ export default function Navebar() {
           </div>
 
 
-          <div className="hidden ps-2 lg:flex lg:gap-x-8">
+          {/* <div className="hidden ps-2 lg:flex lg:gap-x-8">
             {user.map((item) => (
 
               <a key={item.name} href={item.href} className=''>
                 <span className='text-sm/5 text-gray-600'>{item.headding}</span><br />
-                {/* <span className=" text-yellow-900">{item.name}</span> */}
+                <span className=" text-yellow-900">{item.name}</span>
 
               </a>
             ))}
-          </div>
+          </div> */}
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
           <div className="fixed inset-0 z-50" />

@@ -4,6 +4,8 @@ import Footer from './Footer'
 import { Link } from 'react-router-dom'
 import ContNav from './ContNav'
 
+
+
 function Error() {
     return (
         <>
@@ -11,6 +13,7 @@ function Error() {
             <style
                 type="text/css"
                 dangerouslySetInnerHTML={{
+                    
                     __html:
                         "\n      .text-9xl{\n      font-size: 14rem;\n      }\n      @media(max-width: 645px){\n      .text-9xl{\n      font-size: 5.75rem;\n      }\n      .text-6xl{\n      font-size: 1.75rem;\n      }\n      .text-2xl {\n      font-size: 1rem;\n      line-height: 1.2rem;\n      }\n      .py-8 {\n      padding-top: 1rem;\n      padding-bottom: 1rem;\n      }\n      .px-6 {\n      padding-left: 1.2rem;\n      padding-right: 1.2rem;\n      }\n      .mr-6{\n      margin-right: 0.5rem;\n      }\n      .px-12 {\n      padding-left: 1rem;\n      padding-right: 1rem;\n      }\n      }\n    "
                 }}

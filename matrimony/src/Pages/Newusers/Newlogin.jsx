@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
-import Navebar from './Navebar'
-import Footer from './Footer'
-import Asyk from '../assets/images/askyourdoubts/image.png'
-import { Textarea } from '@headlessui/react'
-import { Link, useNavigate } from 'react-router-dom'
-import ContNav from './ContNav'
-import axios from 'axios'
 
-function Login() {
+import Footer from '../Footer'
+
+import { Link, useNavigate } from 'react-router-dom'
+
+import axios from 'axios'
+import Dnav from '../Dummylandingpage/Dnav'
+
+function Newlogin() {
 
 
     const [formData, setFormData] = useState({ email: "", password: "" });
@@ -34,8 +34,9 @@ function Login() {
 
 
             {/* navbar */}
-            <ContNav />
-            <Navebar />
+            {/* <ContNav />
+            <Navebar /> */}
+            <Dnav/>
 
 
 
@@ -155,4 +156,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Newlogin

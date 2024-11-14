@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
-import Navebar from './Navebar'
-import Footer from './Footer'
-import Asyk from '../assets/images/askyourdoubts/image.png'
-import { Textarea } from '@headlessui/react'
+
+import Footer from '../Footer'
+import Asyk from '../../assets/images/askyourdoubts/image.png'
+
 import { Link, Navigate, useNavigate } from 'react-router-dom'
-import ContNav from './ContNav'
+
 import axios from 'axios'
+import Dnav from '../Dummylandingpage/Dnav'
 
 
 
-function Signup() {
+function Newsignup() {
 
     const [formData, setFormData] = useState([
         {
@@ -54,8 +55,7 @@ function Signup() {
     return (
         <>
             {/* navbar */}
-            <ContNav />
-            <Navebar />
+           <Dnav/>
 
 
 
@@ -392,4 +392,4 @@ function Signup() {
     )
 }
 
-export default Signup
+export default Newsignup
