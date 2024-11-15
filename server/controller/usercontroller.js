@@ -1,5 +1,6 @@
 
 const User =require('../models/index')
+const Profile =require('../models/profiles')
 const bcrypt = require('bcryptjs')
 const generateToken = require('../utils/index');
 
@@ -7,6 +8,8 @@ const generateToken = require('../utils/index');
 const nodemailer = require('nodemailer')
 
 
+
+//signup
 const signup=async(req,res)=>{
     const { 
         name,
@@ -53,7 +56,7 @@ const signup=async(req,res)=>{
 };
 
 
-
+//login
 const login=async(req,res)=>{
     const { email, password } = req.body;
     const user = await User.findOne({email});
@@ -130,4 +133,29 @@ const resetPasswordToken=async(req,res)=>{
 
 
 
-module.exports={signup,login,resetpassword,resetPasswordToken}
+const getUsers = async(req,res,next)=>{
+    User.find()
+    .then(Users => res.json(Users))
+    .catch(err => res.json(err))
+}
+
+
+
+const getuserbyid = async (req, res,next) => {
+    console.log(req.params.id)
+  User.findById(req.params.id)
+  .then(user=>{
+    res.status(200).json({
+        users:user
+    })
+   
+  })
+   .catch(err=>{
+        console.log(err)
+        res.status(500).json({
+            error:err
+        })
+    })
+}
+
+module.exports={signup,login,resetpassword,resetPasswordToken,getUsers,getuserbyid}

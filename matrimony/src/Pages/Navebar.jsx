@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Dialog, DialogPanel, DialogBackdrop, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Logo from '../assets/images/logo-a.png'
@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Link } from 'react-router-dom'
 import { RiYoutubeFill, RiInstagramFill, RiLinkedinFill, RiWhatsappFill, RiFacebookFill, RiTwitterFill } from "react-icons/ri";
 
-
+import axios from 'axios'
 
 import {
   Card,
@@ -48,6 +48,14 @@ const user = [
 export default function Navebar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
+  const [test,setTest]=useState([])
+  useEffect(()=>{
+
+    axios.get('http://localhost:5000/api/getuserbyid')
+    .then(test=>setTest(test.data))
+    .catch(err => console.log(err))
+  },[])
+  
 
   return (
     <>
@@ -116,7 +124,7 @@ export default function Navebar() {
 
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            {/* <Menu as="div" className="relative ml-3">
+           <Menu as="div" className="relative ml-3">
               <div>
                 <MenuButton className="relative  flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                   <span className="absolute -inset-1.5" />
@@ -128,7 +136,7 @@ export default function Navebar() {
                   />
                 </MenuButton>
               </div>
-              <MenuItems
+              {/* <MenuItems
                 transition
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
@@ -148,20 +156,20 @@ export default function Navebar() {
                     Sign Up
                   </a></Link>
                 </MenuItem>
-              </MenuItems>
-            </Menu> */}
+              </MenuItems> */}
+            </Menu> 
           </div>
 
 
           <div className="hidden ps-2 lg:flex lg:gap-x-8">
-            {/* {user.map((item) => (
+            {test.map((item) => (
 
-              <a key={item.name} href={item.href} className=''>
-                <span className='text-sm/5 text-gray-600'>{item.headding}</span><br />
+              <a key={item._id} className=''>
+                <span className='text-sm/5 text-gray-600'>{item.email}</span><br />
                 <span className=" text-yellow-900">{item.name}</span>
 
               </a>
-            ))} */}
+            ))}
 
             <Link to={'/'} className='text-sm/5 text-gray-600'>Logout</Link>
           </div>
