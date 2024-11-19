@@ -33,11 +33,11 @@ function App() {
     <>   
 
     <Routes>
-      <Route path='/' element={<Dhome/>}/>
-      <Route path='/newsignup' element={<Newsignup/>}/>
-      <Route path='/newlogin' element={<Newlogin/>}/>
+      {/* <Route path='/' element={<Dhome/>}/> */}
+      {/* <Route path='/newsignup' element={<Newsignup/>}/>
+      <Route path='/newlogin' element={<Newlogin/>}/> */}
       
-      <Route path='/home' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
       <Route path='/dashboard' element={<Dashboard/>}/>
       <Route path='/profile' element={<Profile/>}/>
       <Route path='/intrest' element={<Intrest/>}/>
