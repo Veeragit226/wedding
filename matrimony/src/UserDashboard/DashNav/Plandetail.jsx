@@ -17,7 +17,7 @@ function Plandetail() {
             <Card className=" w-full items-center text-center text-yellow-900 p-5 drop-shadow-md">
                 <CardHeader floated={false} className="text-yellow-900 shadow-none">
                     <h4>Standard Plan</h4>
-                    <img src={plan} className='w-[10] mt-5' alt="profile-picture" />
+                    <img src={plan} className='w-[10] mt-5 transition-all hover:rotate-12' alt="profile-picture" />
                 </CardHeader>
                 <CardBody className="text-center">
                     <Typography variant="" color="blue-gray" className="">

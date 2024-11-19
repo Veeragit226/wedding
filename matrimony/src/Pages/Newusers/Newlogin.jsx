@@ -115,6 +115,7 @@ function Newlogin() {
                                 {/* Remember me */}
                                 <div className="flex items-center">
                                     <input
+                                    required
                                         id="remember-me"
                                         name="remember-me"
                                         type="checkbox"

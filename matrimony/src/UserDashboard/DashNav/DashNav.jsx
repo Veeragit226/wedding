@@ -1,5 +1,6 @@
 import React from 'react'
 import user1 from '../../assets/images/userDashboard/profile.jpg'
+import { Link } from 'react-router-dom'
 
 function DashNav() {
     return (
@@ -23,7 +24,7 @@ function DashNav() {
                                 <path d="M6.4 20a9 9 0 1 1 11.2 0z" />
                             </svg>
                         </div>
-                        Dashboard
+                      <Link to={'/dashboard'}>  Dashboard</Link>
                     </div>
                     <div
                         role="button"
@@ -45,7 +46,7 @@ function DashNav() {
                                 />
                             </svg>
                         </div>
-                        Profile
+                        <Link to={'/profile'}> Profile</Link>
                     </div>
                     <div
                         role="button"
@@ -67,7 +68,7 @@ function DashNav() {
                                 />
                             </svg>
                         </div>
-                        Intrest
+                       <Link to={'/intrest'}> Intrest</Link>
                     </div>
 
 
@@ -124,7 +125,7 @@ function DashNav() {
                                 />
                             </svg>
                         </div>
-                        Plan
+                      <Link to={'/myplan'}>  Plan </Link> 
                     </div>
                     <div
                         role="button"
@@ -146,7 +147,7 @@ function DashNav() {
                                 />
                             </svg>
                         </div>
-                        Settings
+                        <Link to={'/settings'}>Settings</Link>
                     </div>
                     <div
                         role="button"
@@ -168,7 +169,7 @@ function DashNav() {
                                 />
                             </svg>
                         </div>
-                        Log Out
+                        <Link to={'/newlogin'}>Log Out</Link>
                     </div>
                 </nav>
             </div>

@@ -9,7 +9,7 @@ import {
   CardFooter
 } from "@material-tailwind/react";
 import image1 from '../../assets/images/userDashboard/1.jpg'
-import image2 from '../../assets/images/userDashboard/2.jpg'
+import image2 from '../../assets/images/userDashboard/16.jpg'
 import image3 from '../../assets/images/userDashboard/3.jpg'
 import image4 from '../../assets/images/userDashboard/13.jpg'
 import image5 from '../../assets/images/userDashboard/14.jpg'

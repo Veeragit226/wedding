@@ -114,28 +114,14 @@ const EditeProfile = () => {
 
       {/* Social Media Section */}
       <section className="mb-8">
-        <h3 className="text-lg font-light text-yellow-900 mb-2">Social Media</h3>
+        <h3 className="text-lg font-light text-yellow-900 mb-2">Upload Profile Image</h3>
         <div className="grid grid-cols-1 gap-4">
           <input
-            type="text"
-            placeholder="WhatsApp"
+            type="file"
+            placeholder="Upload your Profile"
             className="border p-2 placeholder-black rounded-md w-full"
           />
-          <input
-            type="text"
-            placeholder="Facebook"
-            className="border p-2 placeholder-black rounded-md w-full"
-          />
-          <input
-            type="text"
-            placeholder="Instagram"
-            className="border p-2 placeholder-black rounded-md w-full"
-          />
-          <input
-            type="text"
-            placeholder="LinkedIn"
-            className="border p-2 placeholder-black rounded-md w-full"
-          />
+         
         </div>
       </section>
 

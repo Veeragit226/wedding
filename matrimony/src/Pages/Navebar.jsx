@@ -20,26 +20,21 @@ import {
 
 
 const explore = [
-  { name: 'PROWSE PROFILE' },
+  { name: 'PROWSE PROFILE', path:'/allprofiles' },
   { name: 'WEDDING PROFILE' },
   { name: 'ALL SERVICES' },
 ]
 const all = [
-  { name: 'ALL PROFILE' },
-  { name: 'PROFILE DETAILS' },
-  { name: 'WEDDING' },
-  { name: 'WEDDING VIDEO' },
-  { name: 'OUR SERVICE' },
-  { name: 'PRICING PLANING' },
-  { name: 'LOGIN' },
-  { name: 'SING-UP' },
-  { name: 'PHOTO GALLERY 1' },
-  { name: 'PHOTO GALLERY 2' },
-  { name: 'CONTACT' },
-  { name: 'ABOUT' },
-  { name: 'ASK YOUR DOUBTS' },
-  { name: 'FAQ' },
-  { name: '404' },
+  { name: 'ALL PROFILE', path:'/allprofiles' },
+  { name: 'PROFILE DETAILS', path:'/profiles-details' },
+  { name: 'PRICING PLANING',path:'/plan' },
+  { name: 'LOGIN',path:'/login' },
+  { name: 'SING-UP',path:'/signup' },
+  { name: 'CONTACT',path:'/contactus' },
+  { name: 'ABOUT',path:'/aboutus' },
+  { name: 'ASK YOUR DOUBTS',path:'/askyourdoubts' },
+  { name: 'FAQ', path:'/faq' },
+  { name: '404', path:'/error' },
 ]
 
 const user = [
@@ -171,7 +166,7 @@ export default function Navebar() {
               </a>
             ))}
 
-            <Link to={'/'} className='text-sm/5 text-gray-600'>Logout</Link>
+            <Link to={'/'} className='text-sm/5 text-yellow-900'>Logout</Link>
           </div>
         </nav>
         <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
@@ -207,7 +202,7 @@ export default function Navebar() {
                   {explore.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
+                      href={item.path}
                       className="-mx-3 block ms-2 ps-5 border-b py-2 text-sm  hover:bg-gray-200"
                     >
 
@@ -218,7 +213,7 @@ export default function Navebar() {
                   {all.map((item) => (
                     <a
                       key={item.name}
-                      href={item.href}
+                      href={item.path}
                       className="-mx-3 block ms-2 ps-5 border-b py-2 text-sm  hover:bg-gray-200"
                     >
 
@@ -282,7 +277,7 @@ export default function Navebar() {
               </div>
             </div>
 
-            <div className=' flex justify-around bg-gray-300 rounded p-5' >
+            {/* <div className=' flex justify-around bg-gray-300 rounded p-5' >
               <a href="#" className="">
                 <RiWhatsappFill className=" w-8 h-8   rounded text-sky-950   hover:text-yellow-900 " />
               </a>
@@ -303,7 +298,7 @@ export default function Navebar() {
                 <RiInstagramFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
               </a>
 
-            </div>
+            </div> */}
           </DialogPanel>
         </Dialog>
       </header>
@@ -316,7 +311,7 @@ export default function Navebar() {
 // FlyoutLink
 
 const FlyoutLink = ({ children, href, FlyoutContent }) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState();
 
   const showFlyout = FlyoutContent && open;
 

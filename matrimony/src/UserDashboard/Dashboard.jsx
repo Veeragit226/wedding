@@ -88,7 +88,7 @@ function Dashboard() {
                                 deviceType
                                 dotListClass="custom-dot-list-style"
 
-                                itemClass="carousel-item-padding-40-px p-2">
+                                itemClass="carousel-item-padding-40-px p-2 transition-all hover:scale-110 ">
 
                                 <Card
                                     shadow={false}

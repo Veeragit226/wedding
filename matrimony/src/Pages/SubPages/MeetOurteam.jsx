@@ -35,7 +35,7 @@ function MeetOurteam() {
 
                         <Card className=" w-full">
                             <CardHeader floated={false} className=" m-3">
-                                <img src={meet2} className='w-full' alt="profile-picture" />
+                                <img src={meet2} className='w-full transition-all hover:scale-125 hover:rotate-6 ' alt="profile-picture" />
                             </CardHeader>
                             <CardBody className="text-center">
                                 <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -107,7 +107,7 @@ function MeetOurteam() {
                         </Card>
                         <Card className="w-full">
                             <CardHeader floated={false} className=" m-3">
-                                <img src={meet3} className='w-full' alt="profile-picture" />
+                                <img src={meet3} className='w-full transition-all hover:scale-125 hover:rotate-6' alt="profile-picture" />
                             </CardHeader>
                             <CardBody className="text-center">
                                 <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -179,7 +179,7 @@ function MeetOurteam() {
                         </Card>
                         <Card className="w-full">
                             <CardHeader floated={false} className=" m-3">
-                                <img src={meet1} className='w-full' alt="profile-picture" />
+                                <img src={meet1} className='w-full transition-all hover:scale-125 hover:rotate-6' alt="profile-picture" />
                             </CardHeader>
                             <CardBody className="text-center">
                                 <Typography variant="h4" color="blue-gray" className="mb-2">
@@ -251,7 +251,7 @@ function MeetOurteam() {
                         </Card>
                         <Card className="w-full">
                             <CardHeader floated={false} className=" m-3">
-                                <img src={meet4} className='w-full' alt="profile-picture" />
+                                <img src={meet4} className='w-full transition-all hover:scale-125 hover:rotate-6' alt="profile-picture" />
                             </CardHeader>
                             <CardBody className="text-center">
                                 <Typography variant="h4" color="blue-gray" className="mb-2">

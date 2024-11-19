@@ -4,7 +4,17 @@ import Trust from '../../assets/images/whychoose/Why2.png'
 import wedding from '../../assets/images/whychoose/Why3.png'
 import '../../assets/css/whychoose.css'
 
+import { motion, useScroll } from 'framer-motion';
+
+import { useInView } from 'react-intersection-observer';
+
+
 function Whychooseus() {
+
+    const { scrollYProgress } = useScroll();
+
+    const [ref, inView] = useInView({ threshold: 0.5 }); // Adjust threshold as needed
+  
     return (
         <>
             {/* <div className='bg-gradient-to-r  from-[#2a262691] to-[#2a2c3c]'>
@@ -13,7 +23,22 @@ function Whychooseus() {
                 </div>
             </div> */}
             <div className='bg sm:bg-hidden'>
-            <section  className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
+            <motion.section
+            ref={ref}
+            whileInView
+            
+            initial={{ opacity: 0, x: 10 }}
+            
+            animate={{
+            
+              opacity: inView ? 1 : 0,
+            
+              x: inView ? 0 : 50,
+            
+              transition: { duration: 0.5 }
+            
+            }}
+            className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-4 py-12">
 
             <div className="text-center  tracking-wide text-balance pb-12">
                         <h2 className="text-base font-bold text-yellow-300 ">
@@ -70,7 +95,7 @@ function Whychooseus() {
                     </div>
                    
                 </div>
-            </section>
+            </motion.section>
             </div>
         </>
     )

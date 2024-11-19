@@ -1,6 +1,6 @@
 
 const User =require('../models/index')
-const Profile =require('../models/profiles')
+// const Profile =require('../models/profiles')
 const bcrypt = require('bcryptjs')
 const generateToken = require('../utils/index');
 
@@ -13,20 +13,12 @@ const nodemailer = require('nodemailer')
 const signup=async(req,res)=>{
     const { 
         name,
-        age,
+       
         email, 
-        phone,
-        caste,
-        dob,
-        state,
-        district,
-        height,
-        weight,
-        education,
-        working,
-        password,
-        description,
-        gender }=req.body;
+       
+        password
+
+     }=req.body;
 
     const user = await User.findOne({email});
 
@@ -34,20 +26,10 @@ const signup=async(req,res)=>{
 
         const hashedPassword = await bcrypt.hash(password, 10);
         const newUser = new User({ name,
-            age,
+            
             email, 
-            phone,
-            caste,
-            dob,
-            state,
-            district,
-            height,
-            weight,
-            education,
-            working,
             password:hashedPassword,
-            description,
-            gender});
+            });
         await newUser.save();
         return res.status(201).json({message: "User created successfully"})
     }

@@ -27,7 +27,7 @@ function Allprofiles() {
 
     const newrequest = [
         { name: 'Rashma', course: 'B.sc', proffession: 'IT', Age: '25 Years Old', Height: '5.6', intrest: 'Send Intrest', details: 'More Details', src: image, alt: "image1" },
-        { name: 'Rashma', course: 'B.sc', proffession: 'IT', Age: '25 Years Old', Height: '5.6', intrest: 'Send Intrest', details: 'More Details', src: image2, alt: "image2" },
+        { name: 'Rashma', course: 'B.sc', proffession: 'IT', Age: '25 Years Old', Height: '5.6', intrest: 'Send Intrest', details: 'More Details', src: image6, alt: "image2" },
         { name: 'Rashma', course: 'B.sc', proffession: 'IT', Age: '25 Years Old', Height: '5.6', intrest: 'Send Intrest', details: 'More Details', src: image3, alt: "image3" },
         { name: 'Rashma', course: 'B.sc', proffession: 'IT', Age: '25 Years Old', Height: '5.6', intrest: 'Send Intrest', details: 'More Details', src: image4, alt: "image4" },
         { name: 'Rashma', course: 'B.sc', proffession: 'IT', Age: '25 Years Old', Height: '5.6', intrest: 'Send Intrest', details: 'More Details', src: image5, alt: "image5" },

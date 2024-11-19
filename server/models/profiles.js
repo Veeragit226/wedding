@@ -8,17 +8,13 @@ const profileSchema = new mongoose.Schema({
     password:String,
     gender:String,
     city:String,
+    dob:String,
     age:String,
     height:String,
     weight:String,
-    company:String,
-    course:String,
-    coursetype:String,
-    proffession:String,
-    intrest:String,
-    details:String ,
+    occupation:String,
     hobbies:String,
-    src:Image
+    src:String
 });
 
 const Profile =mongoose.model("Profile",profileSchema)

@@ -14,6 +14,7 @@ import {
 } from "@material-tailwind/react";
 import Userprocesscard from './DashNav/Userprocesscard'
 import ContNav from '../Pages/ContNav'
+import { Link } from 'react-router-dom'
 
 function Profile() {
     return (
@@ -43,7 +44,7 @@ function Profile() {
                             <CardHeader floated={false} className=" m-3">
                                 <img src={meet1} className='w-full' alt="profile-picture" />
                                 <Typography variant="h4" color="blue-gray" className=" py-3 text-white bg-gray-900">
-                                    Edit Profile
+                                    <Link to={'/edite/profile'} >Edit Profile</Link>
                                 </Typography>
                             </CardHeader>
                             

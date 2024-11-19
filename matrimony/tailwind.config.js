@@ -1,3 +1,5 @@
+import { keyframes } from 'framer-motion'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,9 +8,11 @@ export default {
   ],
   theme: {
     extend: {
+
       zIndex: {
         'top': '100000000',
-      }     
+      }
+         
     },
     fontFamily: {
       'body': [
@@ -53,6 +57,7 @@ export default {
   plugins: [
     
   ],
+  
 
   
 }

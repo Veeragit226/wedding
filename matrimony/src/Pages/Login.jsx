@@ -23,9 +23,10 @@ function Login() {
         const { data } = await axios.post("http://localhost:5000/api/login", formData);
         localStorage.setItem("token", data.token);
         alert("Logged in successfully");
-        navigate('/')
+        navigate('/home')
       } catch (error) {
         console.error("Error logging in:", error);
+        alert("Incorrect Email or Password",error)
         console.log(formData)
       }
     }
@@ -113,6 +114,7 @@ function Login() {
                                 {/* Remember me */}
                                 <div className="flex items-center">
                                     <input
+                                    required
                                         id="remember-me"
                                         name="remember-me"
                                         type="checkbox"

@@ -47,9 +47,22 @@ import MeetOurteam from './SubPages/MeetOurteam';
 import Findyourmatch from './SubPages/Findyourmatch';
 
 
+import { motion, useScroll } from 'framer-motion';
+
+import { useInView } from 'react-intersection-observer';
+
+
 // import {motion} from 'framer-motion'
 // import Logo from '../assets/images/logo-a.png'
 function Home() {
+
+
+   //framer motion
+   const { scrollYProgress } = useScroll();
+
+   const [ref, inView] = useInView({ threshold: 0.5 }); // Adjust threshold as needed
+ 
+ 
 
   const responsive = {
     superLargeDesktop: {
@@ -106,7 +119,25 @@ function Home() {
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         >
         </div>
-        <div className="mx-auto max-w-6xl px-5  justify-between p-4  sm:py-40  lg:py-46">
+        <motion.div
+          ref={ref}
+
+
+
+          whileInView
+
+          initial={{ opacity: 0, y: 50 }}
+
+          animate={{
+
+            opacity: inView ? 1 : 0,
+
+            y: inView ? 0 : 50,
+
+            transition: { duration: 0.5 }
+
+          }}
+         className="mx-auto max-w-6xl px-5  justify-between p-4  sm:py-40  lg:py-46">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           </div>
           <div className="text-center  ">
@@ -179,7 +210,7 @@ function Home() {
             </div>
 
           </div>
-        </div>
+        </motion.div>
         <div
           aria-hidden="true"
           className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"

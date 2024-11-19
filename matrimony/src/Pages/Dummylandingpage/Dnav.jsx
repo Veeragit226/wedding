@@ -25,21 +25,16 @@ const explore = [
   { name: 'ALL SERVICES' },
 ]
 const all = [
-  { name: 'ALL PROFILE' },
-  { name: 'PROFILE DETAILS' },
-  { name: 'WEDDING' },
-  { name: 'WEDDING VIDEO' },
-  { name: 'OUR SERVICE' },
-  { name: 'PRICING PLANING' },
-  { name: 'LOGIN' },
-  { name: 'SING-UP' },
-  { name: 'PHOTO GALLERY 1' },
-  { name: 'PHOTO GALLERY 2' },
-  { name: 'CONTACT' },
-  { name: 'ABOUT' },
-  { name: 'ASK YOUR DOUBTS' },
-  { name: 'FAQ' },
-  { name: '404' },
+  { name: 'ALL PROFILE', path:'/newlogin'},
+  { name: 'PROFILE DETAILS', path:'/newlogin' },
+  { name: 'PRICING PLANING', path:'/newlogin' },
+  { name: 'LOGIN', path:'/newlogin' },
+  { name: 'SING-UP', path:'/newsignup' },
+  { name: 'CONTACT', path:'/newlogin' },
+  { name: 'ABOUT',  path:'/newlogin' },
+  { name: 'ASK YOUR DOUBTS',  path:'/newlogin' },
+  { name: 'FAQ', path:'/newlogin' },
+  { name: '404',  path:'/newlogin' },
 ]
 
 const user = [
@@ -130,7 +125,7 @@ export default function Dnav() {
                   />
                 </MenuButton>
               </div>
-              <MenuItems
+              {/* <MenuItems
                 transition
                 className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
               >
@@ -150,7 +145,7 @@ export default function Dnav() {
                     Sign Up
                   </a></Link>
                 </MenuItem>
-              </MenuItems>
+              </MenuItems> */}
             </Menu>
           </div>
 
@@ -165,7 +160,7 @@ export default function Dnav() {
               </a>
             ))} */}
 
-<Link to={"/newlogin"} className='text-sm/5 text-gray-600'>Login</Link>
+<Link to={"/newlogin"} className='text-sm/5 text-yellow-900'>Login</Link>
 
           </div>
         </nav>
@@ -211,6 +206,7 @@ export default function Dnav() {
                   ))}
                   <h1 className='text-base/5 text-yellow-900 px-2 py-2 hover:bg-gray-50'>ALL PAGES</h1>
                   {all.map((item) => (
+                    <Link to={item.path}>
                     <a
                       key={item.name}
                       href={item.href}
@@ -219,6 +215,7 @@ export default function Dnav() {
 
                       {item.name}
                     </a>
+                    </Link>
                   ))}
 
 
@@ -277,7 +274,7 @@ export default function Dnav() {
               </div>
             </div>
 
-            <div className=' flex justify-around bg-gray-300 rounded p-5' >
+            {/* <div className=' flex justify-around bg-gray-300 rounded p-5' >
               <a href="#" className="">
                 <RiWhatsappFill className=" w-8 h-8   rounded text-sky-950   hover:text-yellow-900 " />
               </a>
@@ -298,7 +295,7 @@ export default function Dnav() {
                 <RiInstagramFill className=" w-8 h-8   rounded text-sky-950  hover:text-yellow-900 " />
               </a>
 
-            </div>
+            </div> */}
           </DialogPanel>
         </Dialog>
       </header>

@@ -34,7 +34,7 @@ function Error() {
                         <p className="text-2xl pb-8 px-12 font-light">
                             We can't seem to find the page you are looking for.
                         </p>
-                        <button className='btn-support'><Link to={'/'}>VISIT HOME PAGE NOW</Link></button>
+                        <button className='btn-support'><Link to={'/home'}>VISIT HOME PAGE NOW</Link></button>
 
                         <div className='flex object-cover animate-pulse  h-20 bottom-bg items-end'>
                             {/* <img src={bottom}  alt="" /> */}
