@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <>
-      <footer className="bg-white dark:bg-gray-900 ">
+      <footer className="bg-gray-900 ">
         <div className="container px-6 py-12 mx-auto  max-w-7xl px-5  justify-between p-4  ">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
             <div className="sm:col-span-2">
-              <h1 className="max-w-lg text-sm tracking-tight text-gray-800 xl:text-xl dark:text-white">
+              <h1 className="max-w-lg text-sm tracking-tight xl:text-xl text-white">
                 Trusted by over thousands of Boys & Girls for successfull marriage .
               </h1>
               <div className="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
@@ -25,50 +25,50 @@ function Footer() {
               </div>
             </div>
             <div>
-              <p className="font-semibold text-gray-800 dark:text-white">
+              <p className="font-semibold text-white">
                 HELP & SUPPORT
               </p>
               <div className="flex flex-col items-start mt-5 space-y-2">
                <Link to={'/aboutus'}> <a
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  className="text-white transition-colors duration-300  dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   About Us
                 </a></Link>
                 <a
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   Feedbacks
                 </a>
                 <a
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  className="text-white transition-colors duration-300  dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   Testimonials
                 </a>
                <Link to={'/contactus'}> <a
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   Contact Us
                 </a></Link>
                <Link to={'/faq'}> <a
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500"
+                  className="text-white transition-colors duration-300  dark:hover:text-blue-400 hover:underline hover:text-blue-500"
                 >
                   FAQs
                 </a></Link>
               </div>
             </div>
             <div>
-              <p className="font-semibold text-gray-800 dark:text-white">
+              <p className="font-semibold text-white">
                 GET IN TOUCH
               </p>
               <div className="flex flex-col items-start mt-5 space-y-2">
                 <p
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 "
+                  className="text-white transition-colors duration-300 "
                 >
                   Address: 3812 whymatrimony Egmore
 
@@ -77,13 +77,13 @@ function Footer() {
                 </p>
                 <p
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 "
+                  className="text-white transition-colors duration-300  "
                 >
                   Phone: +11 (12345) 55 - 5555
                 </p>
                 <p
                   href="#"
-                  className="text-gray-600 transition-colors duration-300 dark:text-gray-300 "
+                  className="text-white transition-colors duration-300 "
                 >
 
                   Email: whymatrimony@gamil.com
