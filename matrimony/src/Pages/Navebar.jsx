@@ -60,7 +60,7 @@ export default function Navebar() {
 
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
-              <Link to={'/home'}>
+              <Link to={'/'}>
                 <img
                   alt=""
                   src={Logo}

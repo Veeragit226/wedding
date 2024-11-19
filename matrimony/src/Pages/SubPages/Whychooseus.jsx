@@ -27,13 +27,13 @@ function Whychooseus() {
             ref={ref}
             whileInView
             
-            initial={{ opacity: 0, x: 10 }}
+            initial={{ opacity: 0, y: 10 }}
             
             animate={{
             
               opacity: inView ? 1 : 0,
             
-              x: inView ? 0 : 50,
+              y: inView ? 0 : 50,
             
               transition: { duration: 0.5 }
             
